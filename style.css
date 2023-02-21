@@ -1,0 +1,67 @@
+:root
+{
+background-color: burlywood;
+}
+
+
+h1
+{
+    display: flex;
+    margin-bottom: 7.5%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 72px;
+}
+
+
+
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+img
+{
+    max-width: 450px;
+    max-height: 450px;
+    cursor: pointer;
+}
+img:hover 
+{
+    transform: scale(1.1);
+    transition: 300ms;
+    counter-reset: pointer;
+}
+
+
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #player-score, #computer-score {
+    margin: 0 20px;
+  }
+.history
+{
+        font-weight: bold;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.history-list
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
