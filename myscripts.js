@@ -46,10 +46,39 @@ function updateScoreboard() {
 
 function updateHistoryList(playerSelection, computerSelection, roundResult) {
   const historyListItem = document.createElement("li");
-  historyListItem.innerText = `Player: ${playerSelection} | Computer: ${computerSelection} | Result: ${roundResult}`;
+  historyListItem.classList.add("history-list-item");
+
+  
+  // create image elements for player and computer selections
+  const playerImage = document.createElement("img");
+  playerImage.src = getImageSource(playerSelection);
+  playerImage.alt = playerSelection;
+  const computerImage = document.createElement("img");
+  computerImage.src = getImageSource(computerSelection);
+  computerImage.alt = computerSelection;
+  
+  // add images and result text to history list item
+  historyListItem.appendChild(playerImage);
+  historyListItem.appendChild(document.createTextNode(" vs. "));
+  historyListItem.appendChild(computerImage);
+  historyListItem.appendChild(document.createTextNode(` - ${roundResult}`));
+  
+  
+  // add history list item to list
   historyList.push(historyListItem);
   historyListUl.appendChild(historyListItem);
 }
+
+function getImageSource(selection) {
+  if (selection === "rock") {
+    return "therock.gif";
+  } else if (selection === "paper") {
+    return "thepaper.png";
+  } else if (selection === "scissors") {
+    return "thescissors.png";
+  }
+}
+
 
 function checkGameEnd() {
   if (playerScore === 5) {
