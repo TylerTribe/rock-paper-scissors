@@ -25,8 +25,8 @@ h1
 
 img
 {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 450px;
+    max-height: 450px;
     cursor: pointer;
 }
 img:hover 
@@ -43,7 +43,6 @@ img:hover
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    font-size: 32px;
   }
   
   #player-score, #computer-score {
@@ -52,11 +51,11 @@ img:hover
 .history
 {
         font-weight: bold;
-        font-size: 22px;
+        list-style: none;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+}
 
 .history-list
 {
@@ -65,10 +64,4 @@ img:hover
     align-items: center;
     justify-content: center;
 }
-
-.history-list-item img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
 
